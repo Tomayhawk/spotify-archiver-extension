@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* basic styling for the popup */
+      body { width: 260px; padding: 15px; font-family: sans-serif; background-color: #121212; color: white; }
+      h3 { margin-top: 0; color: #1DB954; } /* spotify green for headings */
+      .option { display: block; margin-bottom: 8px; cursor: pointer; font-size: 13px; }
+      input { margin-right: 10px; accent-color: #1DB954; } /* checkbox styling */
+      button { 
+        width: 100%; padding: 10px; margin-top: 15px; 
+        cursor: pointer; background: #1DB954; color: white; 
+        border: none; border-radius: 20px; font-weight: bold; 
+      }
+      button:hover { background: #1ed760; } /* hover effect for button */
+      #status { margin-top: 10px; font-size: 11px; color: #b3b3b3; text-align: center; }
+      hr { border: 0; border-top: 1px solid #333; margin: 10px 0; }
+    </style>
+  </head>
+  <body>
+    <h3>export options</h3> <!-- section heading -->
+    <label class="option"><input type="checkbox" id="index" checked> include index (#)</label>
+    
+    <label class="option"><input type="checkbox" id="title" checked> Title</label>
+    <label class="option"><input type="checkbox" id="artist" checked> Artist</label>
+    <label class="option"><input type="checkbox" id="album" checked> Album</label>
+    <label class="option"><input type="checkbox" id="date" checked> Date Added</label>
+    <label class="option"><input type="checkbox" id="duration" checked> Length</label>
+    <hr>
+    <label class="option"><input type="checkbox" id="url"> Spotify URL</label>
+    <label class="option"><input type="checkbox" id="cover"> Cover Art Link</label>
+    <label class="option"><input type="checkbox" id="explicit"> Explicit Tag</label>
+
+    <button id="startBtn">start export</button> <!-- button to start the export process -->
+    <div id="status">ready</div> <!-- status message -->
+
+    <script src="popup.js"></script> <!-- link to the JavaScript file -->
+  </body>
+</html>
